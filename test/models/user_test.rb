@@ -49,7 +49,7 @@ class UserTest < ActiveSupport::TestCase
     duplicate = @user.dup
     duplicate.email = @user.email.upcase
     @user.save
-    assert_not duplicate_user.valid?
+    assert_not duplicate.valid?
   end
   
   test "pw should have min length" do
